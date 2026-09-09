@@ -1,0 +1,499 @@
+```css
+/* removes the default browser space around my whole page */
+body {
+    margin: 0px;
+}
+
+
+/* my top banner container */
+.top_banner {
+    width: 100%; /* lets banner use all available width */
+    max-width: 2172px; /* stops it growing past original size */
+    height: auto; /* height changes with width */
+    margin: 0 auto; /* 0 top/bottom, auto centers left/right */
+    text-align: center;
+    overflow: hidden; /* hides anything sticking outside container */
+    display: block;
+}
+
+
+/* actual image inside my banner */
+.top_banner img {
+    width: 100%;
+    max-width: 2172px;
+    height: auto; /* keeps image proportions when resized */
+    display: block; /* removes little image gap browsers can add */
+}
+
+
+/* navbar outside container */
+.navbar {
+    border-top: 2px solid #B52CFF;
+    border-bottom: 2px solid #B52CFF;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+/* navbar list */
+.navbar ul {
+    display: flex; /* puts nav items beside each other */
+    list-style-type: none; /* removes bullet points */
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center; /* centers items horizontally */
+}
+
+
+/* parent for dropdown menu */
+.has-sub_projects {
+    position: relative; /* makes absolute dropdown position from this parent */
+}
+
+
+/* navbar links */
+.navbar a {
+    color: aliceblue;
+    text-decoration: none; /* removes underline */
+    padding: 15px 40px; /* 15 vertical, 40 horizontal */
+    display: block; /* makes whole padded area clickable */
+    text-align: center;
+}
+
+
+/* what happens when mouse is over nav link */
+.navbar a:hover {
+    background-color: #603BA6;
+}
+
+
+/* projects dropdown, hidden normally */
+.navbar .sub_projects {
+    display: none; /* hides dropdown until hover */
+    position: absolute; /* takes it out of normal page flow */
+    top: 100%; /* starts directly under parent */
+    left: 0;
+    background-color: black;
+    z-index: 900; /* keeps dropdown above lower stuff */
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* show dropdown when i hover projects */
+.has-sub_projects:hover .sub_projects {
+    display: flex; /* makes hidden dropdown visible */
+    flex-direction: column; /* stacks dropdown links vertically */
+}
+
+
+/* links inside dropdown */
+.sub_projects a {
+    padding: 15px 20px;
+    white-space: nowrap; /* stops link text going to next line */
+}
+
+
+/* SOFTWARE BOX */
+
+
+/* main fake software window */
+.software_box {
+    position: absolute; /* lets me manually place this box */
+    top: 53%; /* moves starting point down page */
+    left: 78%; /* moves starting point across page */
+    transform: translate(-50%, -50%); /* centers box on the top/left point */
+
+    width: 48rem; /* rem scales from root font size */
+    min-height: 27rem; /* box cant get shorter than this */
+    height: auto; /* can grow if content needs more room */
+
+    border: 2px solid #ae4ff7;
+    border-top: 30px solid #ae4ff7; /* thick top makes fake window title bar */
+    z-index: 10; /* puts box above lower z-index elements */
+    padding: 20px;
+    box-sizing: border-box; /* width includes padding + border */
+}
+
+
+/* fake window buttons */
+.sw-btn {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute; /* lets each button sit on title bar */
+    top: -25px; /* moves button into purple top border */
+    display: flex;
+    align-items: center; /* center button symbol vertically */
+    justify-content: center; /* center button symbol horizontally */
+    cursor: pointer; /* hand cursor when hovered */
+    box-sizing: border-box;
+}
+
+
+/* same class with different right positions = buttons line up */
+.sw-close { right: 5px; }
+.sw-maximize { right: 30px; }
+.sw-minimize { right: 55px; }
+
+
+/* ::before creates fake element without adding html */
+.sw-minimize::before {
+    content: ""; /* pseudo element needs content to exist */
+    width: 10px;
+    height: 2px;
+    background-color: #ae4ff7;
+    position: absolute;
+    bottom: 4px;
+}
+
+
+/* makes 2 fake squares for maximize icon */
+.sw-maximize::before, .sw-maximize::after {
+    content: "";
+    border: 1.5px solid #ae4ff7;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+
+/* positions the 2 maximize squares */
+.sw-maximize::before { width: 9px; height: 9px; top: 3px; right: 3px; }
+.sw-maximize::after { width: 9px; height: 9px; bottom: 3px; left: 3px; }
+
+
+/* makes the 2 lines used for X */
+.sw-close::before, .sw-close::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: #ae4ff7;
+}
+
+
+/* rotate both lines opposite directions = X */
+.sw-close::before { transform: rotate(45deg); }
+.sw-close::after { transform: rotate(-45deg); }
+
+
+/* button hover effect */
+.sw-btn:hover { background-color: #ae4ff7; }
+.sw-btn:hover::before, .sw-btn:hover::after { background-color: black; border-color: black; }
+
+
+/* SOFTWARE BOX TITLE */
+
+
+/* fake window title */
+.sw-title {
+    position: absolute;
+    top: -26px; /* moves title into purple title bar */
+    left: 8px;
+    color: black;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    user-select: none; /* stops me highlighting title text */
+}
+
+
+/* FIRST TERMINAL ROW */
+
+
+/* each one is manually positioned on same row */
+.sw-text-one { color: aliceblue; position: absolute; top: 5px; left: 2.5rem; font-size: 1rem; margin: 0; }
+.sw-text-two { color: #00FF00; position: absolute; top: 5px; left: 17rem; font-size: 1rem; margin: 0; }
+.sw-text-three { color: #FFA500; position: absolute; top: 5px; left: 18.5rem; font-size: 1rem; margin: 0; }
+.sw-text-four { color: #D3D3D3; position: absolute; top: 5px; left: 38rem; font-size: 1rem; margin: 0; }
+
+
+/* loading text inside software box */
+.sw-text-five {
+    color: #D3D3D3;
+    position: absolute;
+    top: 40px;
+    left: 6.65%; /* percent position changes with parent width */
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+/* ==========================================================
+   FULL DESKTOP PROGRESS BAR POSITIONING
+   ========================================================== */
+
+
+/* all 3 progress rows share this */
+.progress-container, 
+.progress-container-two, 
+.progress-container-three {
+    position: absolute; /* manually place progress rows */
+    left: 6.65%;
+    display: flex; /* text and bar can sit beside each other */
+    flex-direction: row; /* left to right */
+    align-items: center; /* centers text/bar vertically */
+    gap: 0;
+    width: 90%;
+    background-color: transparent; /* no background box */
+    padding: 0;
+}
+
+
+/* each progress row gets different vertical position */
+.progress-container       { top: 90px; }
+.progress-container-two   { top: 135px; }
+.progress-container-three { top: 180px; }
+
+
+/* empty progress bar tracks */
+.progress-bar, .progress-bar-two, .progress-bar-three {
+    width: 150px;
+    height: 14px;
+    background-color: #e0e0e0; /* empty part of bar */
+    border-radius: 25px; /* rounds bar ends */
+    margin: 0;
+    overflow: hidden; /* clips green fill inside rounded bar */
+    order: 2; /* flex order puts bar after text */
+    flex-shrink: 0; /* stops bar getting squished */
+}
+
+
+/* ::before is the green fill inside each bar */
+.progress-bar::before, .progress-bar-two::before, .progress-bar-three::before {
+    content: "";
+    display: block;
+    height: 100%; /* fill matches bar height */
+    background-color: #4caf50;
+    border-radius: 25px;
+}
+
+
+/* these percentages control how full each bar looks */
+.progress-bar::before { width: 70%; }
+.progress-bar-two::before { width: 40%; }
+.progress-bar-three::before { width: 90%; }
+
+
+/* labels beside progress bars */
+.sw-text-six, .sw-text-seven, .sw-text-eight {
+    color: #D3D3D3;
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap; /* keeps text on one line */
+    order: 1; /* flex order puts text before bar */
+    width: 200px; /* same width makes all bars start same place */
+    flex-shrink: 0; /* stops label width shrinking */
+}
+
+
+/* SMALLER SCREEN VERSION - anything 1600px wide or smaller uses this*/
+
+
+/* @media only runs these rules when condition is true */
+@media (max-width: 1600px) {
+
+
+    /* BANNER + NAV */
+
+
+    body {
+        overflow-x: hidden !important;
+    }
+
+
+    .top_banner {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+
+    .navbar ul {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+
+    .navbar a {
+        padding: 12px 20px !important;
+        text-align: left !important;
+        border-bottom: 1px solid #222 !important;
+    }
+
+
+    .navbar .sub_projects {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+
+    /* SOFTWARE WIDGET BOX */
+
+
+    .software_box {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 92% !important;
+        max-width: 48rem;
+
+        /* auto lets box grow with content */
+        height: auto !important;
+        min-height: 27rem !important;
+
+        /* 20px left gap, auto on right */
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+        margin-left: 20px !important;
+        margin-right: auto !important;
+
+        padding: 20px !important;
+        padding-bottom: 40px !important;
+        box-sizing: border-box !important;
+    }
+
+
+    /* hide window buttons */
+    .sw-close, .sw-maximize, .sw-minimize {
+        display: none !important;
+    }
+
+
+    /* TERMINAL TEXT RESET */
+
+
+    .sw-text-one, .sw-text-two, .sw-text-three, .sw-text-four, .sw-text-five {
+        position: relative !important; /* back into normal flow */
+        top: auto !important;
+        left: auto !important;
+        display: block !important;
+        margin: 10px 0 !important;
+    }
+
+
+    /* keeps first terminal row side by side */
+    .sw-text-one, .sw-text-two, .sw-text-three, .sw-text-four {
+        display: inline-block !important;
+        margin-right: 12px !important;
+        margin-bottom: 10px !important;
+    }
+
+
+    .sw-text-five {
+        margin-bottom: 25px !important;
+    }
+
+
+    /* PROGRESS ROWS */
+
+
+    .progress-container, 
+    .progress-container-two, 
+    .progress-container-three {
+        position: relative !important; /* rows now stack normally */
+        top: auto !important;
+        left: auto !important;
+
+        display: flex !important;
+        flex-direction: row !important; /* text then bar */
+        align-items: center !important; /* same vertical line */
+        gap: 0 !important;
+
+        background-color: transparent !important;
+        padding: 0 !important;
+        margin: 15px 0 !important; /* space between rows */
+        width: 100% !important;
+    }
+
+
+    /* progress bar lines */
+    .progress-bar, .progress-bar-two, .progress-bar-three {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        width: 150px !important; /* bar length */
+        height: 14px !important; /* bar thickness */
+        background-color: #e0e0e0 !important; /* empty part */
+        border-radius: 25px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+
+        order: 2 !important; /* bar stays right of text */
+
+        flex-shrink: 0 !important; /* dont let flex squash bar */
+    }
+
+
+    /* green filler inside progress bars */
+    .progress-bar::before, .progress-bar-two::before, .progress-bar-three::before {
+        content: "" !important;
+        display: block !important;
+        height: 100% !important;
+        background-color: #4caf50 !important; /* green fill */
+        border-radius: 25px !important;
+    }
+
+
+    /* amount each bar is filled */
+    .progress-bar::before { width: 70% !important; }
+    .progress-bar-two::before { width: 40% !important; }
+    .progress-bar-three::before { width: 90% !important; }
+
+
+    /* text beside progress bars */
+    .sw-text-six, .sw-text-seven, .sw-text-eight {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        display: block !important;
+        margin: 0 !important;
+        color: #D3D3D3 !important;
+        font-size: 0.95rem !important;
+        white-space: nowrap !important; /* dont wrap text */
+
+        order: 1 !important; /* text stays left of bar */
+
+        width: 200px !important; /* controls distance from text to bar */
+        flex-shrink: 0 !important;
+    }
+
+
+}
+
+
+/* ==========================================================
+   ABOUT PAGE
+   ========================================================== */
+
+
+.a_page_title{
+    color: #e0e0e0;
+    position: relative; /* needed before top can move this */
+    top: 400px; /* moves title 400px down from normal spot */
+}
+
+
+/* BLOG PAGE SECTION */
+
+
+/* PROJECT PAGE SECTION */
+
+
+/* CONTACT PAGE SECTION */
+
+
+/* ALGORITHM PAGE SECTION */
+
+
+/* GAMES PAGE SECTION */
+
+
+/* CODE PAGE SECTION */
+```
