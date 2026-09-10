@@ -112,7 +112,6 @@ main {
 body {
     margin: 0px;
     min-height: 100%;
-
 }
 
 
@@ -466,17 +465,21 @@ html, body{
 .blog-layout-wrapper > nav {
     position: fixed;
     width: 25%;
-    max-width: 25%;
+    max-width:25%;
+    margin-top: 11.75%;
+    height: calc(100vh - 11.75vw);
 }
 
 /* 2. Update your sidebar to fill that nav container completely */
 .b-blog-sidebar {
-    width: 25%;
-    max-width: 25%;
-    background-color: #1d1b22; /* Fixed missing # */
-    height: 100vh;
-    max-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-color: #491f92; 
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
     z-index: 50;
+    overflow-y: auto; 
 }
 
 /* 3. Ensure the list stacks vertically instead of smashing horizontally */
@@ -488,15 +491,12 @@ html, body{
     padding: 0px;
     margin: 0px;
 }
+.b-blog-sidebar ul li {
+    width: 25vw;
+    display: block;
+    position: relative;
+}
 
-
-    /* dropdown parent */
-.has-sub_projects {
-        position: relative;
-    }
-
-
-    /* navbar links */
 .b-blog-sidebar a {
         font-size: 15px;
         color: aliceblue;
@@ -528,136 +528,101 @@ html, body{
 .b-blog-layout{
     display: flex;
     align-items: stretch;
+    width: 100%;
 }
+
 /* blog one */
-.b-ai-blog-one{
-    text-align: center;
-    position: absolute;
+.b-ai-blog-one,
+.b-ai-blog-two,
+.b-ai-blog-three,
+.b-ai-blog-four,
+.b-ai-blog-five,
+.b-ai-blog-six,
+.b-ai-blog-seven,
+.b-ai-blog-eight,
+.b-ai-blog-nine,
+.b-ai-blog-ten {
+    position: relative;    
+    width: 100%;          
     background-color: #491f92;
     color: white;
-    width: 100%;
-    top: 24.75%;
+    text-align: center;
+    box-sizing: border-box;
     z-index: 50;
-}
-.b-blog-link-one {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.b-ai-blog-one:hover{
-    background-color: #8b3dff;
-}
-/* blog 2 */
-.b-ai-blog-two{
-    text-align: center;
-    position: absolute;
-    background-color: #491f92;
-    color: white;
-    width: 100%;
-    top: 33.35%;
     scroll-margin-top: 20%;
-    z-index: 50;
 }
-.b-blog-link-two {
+
+.b-blog-link-one,
+.b-blog-link-two,
+.b-blog-link-three,
+.b-blog-link-four,
+.b-blog-link-five,
+.b-blog-link-six,
+.b-blog-link-seven,
+.b-blog-link-eight,
+.b-blog-link-nine,
+.b-blog-link-ten {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-=}
-.b-ai-blog-two:hover{
+    z-index: 1;
+}
+
+.b-ai-blog-one:hover,
+.b-ai-blog-two:hover,
+.b-ai-blog-three:hover,
+.b-ai-blog-four:hover,
+.b-ai-blog-five:hover,
+.b-ai-blog-six:hover,
+.b-ai-blog-seven:hover,
+.b-ai-blog-eight:hover,
+.b-ai-blog-nine:hover,
+.b-ai-blog-ten:hover {
     background-color: #8b3dff;
 }
-/* blog 3 */
-.b-ai-blog-three{
-    text-align: center;
-    position: absolute;
-    background-color: #491f92;
-    color: white;
-    width: 100%;
-    top: 42%;
-    scroll-margin-top: 20%;
-    z-index: 50;
-}
-.b-blog-link-three {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-=}
-.b-ai-blog-three:hover{
-    background-color: #8b3dff;
-}
-/* blog 4 */
-.b-ai-blog-four{
-    text-align: center;
-    position: absolute;
-    background-color: #491f92;
-    color: white;
-    width: 100%;
-    top: 50.6%;
-    scroll-margin-top: 20%;
-    z-index: 50;
-}
-.b-blog-link-four {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-=}
-.b-ai-blog-three:four{
-    background-color: #8b3dff;
-}
-/* blog five */
-.b-ai-blog-five{
-    text-align: center;
-    position: absolute;
-    background-color: #491f92;
-    color: white;
-    width: 100%;
-    top: 59.25%;
-    scroll-margin-top: 20%;
-    z-index: 50;
-}
-.b-blog-link-five {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-=}
-.b-ai-blog-five:hover{
-    background-color: #8b3dff;
-}
-.b-ai-blog-three{
-    text-align: center;
-    position: absolute;
-    background-color: #491f92;
-    color: white;
-    width: 100%;
-    top: 42%;
-    scroll-margin-top: 20%;
-    z-index: 50;
-}
-.b-blog-link-three {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-=}
-.b-ai-blog-three:hover{
-    background-color: #8b3dff;
-}
+
 .b-ai-blog-one h3,
-.b-ai-blog-two h3 {
+.b-ai-blog-two h3,
+.b-ai-blog-three h3,
+.b-ai-blog-four h3,
+.b-ai-blog-five h3,
+.b-ai-blog-six h3,
+.b-ai-blog-seven h3,
+.b-ai-blog-eight h3,
+.b-ai-blog-nine h3,
+.b-ai-blog-ten h3 {
     position: relative;
-    z-index: 60;    
-    pointer-events: none;  
+    z-index: 2;
+    pointer-events: none;
+    margin: 0;
+    padding: 20px 10px;  
+}
+.b-content-bar-wrapper{
+    position: relative;
+    margin-top: 10%;
+}
+/* blog content */
+.b-content-bar{
+    position: absolute;
+    left: 25%;
+    background-color: #111014;
+    color: #e8e8e8;
+    width: 50%;
+    max-width: 50%;
+    min-height: 100%;
+    border-right: 1px solid #ae4ff7;
+    border-left: 3px solid #ae4ff7;
+}
+
+.b-content-selection-bar{
+    position: relative;
+    left: 0%;
+    background-color: #1d1b22;
+    color: white;
+    width: 25%;
+    height: 100%;
 }
 .b-content-bar{
     position: absolute;
@@ -671,7 +636,6 @@ html, body{
     border-left: 3px solid #ae4ff7;
 }
 
-
 .b-content-selection-bar{
     position: relative;
     left: 0%;
@@ -684,8 +648,8 @@ html, body{
 
 /* blog post */
 .blog-post {
-    width: min(900px, 90%);
-    margin-top: 200px;
+    width: 90%;
+    margin-top: 5%;
     margin-left: 5%;
     padding: 0px 0 100px;
     scroll-margin-top: 225px;
