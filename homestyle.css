@@ -112,16 +112,7 @@ main {
 body {
     margin: 0px;
     min-height: 100%;
-    background:
-        linear-gradient(
-            to right,
-            #1d1b22 0%,
-            #1d1b22 25%,
-            black 25%,
-            black 100%
 
-
-        )
 }
 
 
@@ -472,6 +463,60 @@ html, body{
 
 }
 
+.blog-layout-wrapper > nav {
+    position: fixed;
+    width: 25%;
+    max-width: 25%;
+}
+
+/* 2. Update your sidebar to fill that nav container completely */
+.b-blog-sidebar {
+    width: 25%;
+    max-width: 25%;
+    background-color: #1d1b22; /* Fixed missing # */
+    height: 100vh;
+    max-height: 100vh;
+    z-index: 50;
+}
+
+/* 3. Ensure the list stacks vertically instead of smashing horizontally */
+.b-blog-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+    /* dropdown parent */
+.has-sub_projects {
+        position: relative;
+    }
+
+
+    /* navbar links */
+.b-blog-sidebar a {
+        font-size: 15px;
+        color: aliceblue;
+        text-decoration: none;
+        padding: 20px 15px;
+        display: block;
+        text-align: center;
+    }
+
+
+    /* navbar hover */
+.b-blog-sidebar a:hover {
+        background-color: #603BA6;
+    }
+
+/* Fix: Assign remaining space to your blog content */
+.blog-main-content {
+    flex: 1;
+    padding: 20px;
+}
 
 /* about title */
 .a_page_title{
@@ -484,34 +529,151 @@ html, body{
     display: flex;
     align-items: stretch;
 }
-.b-ai-blog{
+/* blog one */
+.b-ai-blog-one{
     text-align: center;
     position: absolute;
     background-color: #491f92;
     color: white;
-    width: 25%;
-    top: 27%;
-    z-index: 100;
+    width: 100%;
+    top: 24.75%;
+    z-index: 50;
 }
-.b-ai-blog:hover{
+.b-blog-link-one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.b-ai-blog-one:hover{
     background-color: #8b3dff;
 }
-/* blog content */
+/* blog 2 */
+.b-ai-blog-two{
+    text-align: center;
+    position: absolute;
+    background-color: #491f92;
+    color: white;
+    width: 100%;
+    top: 33.35%;
+    scroll-margin-top: 20%;
+    z-index: 50;
+}
+.b-blog-link-two {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+=}
+.b-ai-blog-two:hover{
+    background-color: #8b3dff;
+}
+/* blog 3 */
+.b-ai-blog-three{
+    text-align: center;
+    position: absolute;
+    background-color: #491f92;
+    color: white;
+    width: 100%;
+    top: 42%;
+    scroll-margin-top: 20%;
+    z-index: 50;
+}
+.b-blog-link-three {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+=}
+.b-ai-blog-three:hover{
+    background-color: #8b3dff;
+}
+/* blog 4 */
+.b-ai-blog-four{
+    text-align: center;
+    position: absolute;
+    background-color: #491f92;
+    color: white;
+    width: 100%;
+    top: 50.6%;
+    scroll-margin-top: 20%;
+    z-index: 50;
+}
+.b-blog-link-four {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+=}
+.b-ai-blog-three:four{
+    background-color: #8b3dff;
+}
+/* blog five */
+.b-ai-blog-five{
+    text-align: center;
+    position: absolute;
+    background-color: #491f92;
+    color: white;
+    width: 100%;
+    top: 59.25%;
+    scroll-margin-top: 20%;
+    z-index: 50;
+}
+.b-blog-link-five {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+=}
+.b-ai-blog-five:hover{
+    background-color: #8b3dff;
+}
+.b-ai-blog-three{
+    text-align: center;
+    position: absolute;
+    background-color: #491f92;
+    color: white;
+    width: 100%;
+    top: 42%;
+    scroll-margin-top: 20%;
+    z-index: 50;
+}
+.b-blog-link-three {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+=}
+.b-ai-blog-three:hover{
+    background-color: #8b3dff;
+}
+.b-ai-blog-one h3,
+.b-ai-blog-two h3 {
+    position: relative;
+    z-index: 60;    
+    pointer-events: none;  
+}
 .b-content-bar{
     position: absolute;
     left: 25%;
     background-color: #111014;
     color: #e8e8e8;
     width: 50%;
-    min-height: 100vh;
+    max-width: 50%;
+    min-height: 100%;
     border-right: 1px solid #ae4ff7;
     border-left: 3px solid #ae4ff7;
-    margin-top: 13%;
 }
 
 
 .b-content-selection-bar{
-    position: absolute;
+    position: relative;
     left: 0%;
     background-color: #1d1b22;
     color: white;
@@ -520,13 +682,14 @@ html, body{
 
 }
 
-
-
 /* blog post */
 .blog-post {
     width: min(900px, 90%);
-    margin: 0 auto;
+    margin-top: 200px;
+    margin-left: 5%;
     padding: 0px 0 100px;
+    scroll-margin-top: 225px;
+
 }
 
 
@@ -677,5 +840,8 @@ html, body{
         padding: 15px;
         font-size: 0.9rem;
     }
-
+    .blog-post em {
+        color: #b56cff;
+        font-style: italic;
+    }
 }
