@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<HTml>
+<HEAD>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Tester</title>
+    <link rel="stylesheet" href="style.css">
+    <title>It's All Subjective</title>
+    <link rel="icon" type="image/x-icon" href="images/web-icon-pw.png">
+</HEAD>
+<BODY>
+    <header>
+        <!-- <h1>Page 1</h1> -->
+    </header>
+    <div class="container">
+        <div class="screen active" id="start-screen">
+            <h1>Quiz Time!</h1>
+            <p>Time to start your quiz!</p>
+            <button class="start-btn" id="start-button">Start quiz</button>
+        </div> 
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-header">
+                <h2 id="question-text">Questions goes here</h2>
+                <div class="quiz-info">
+                    <p>
+                        question <span id="current-question">1</span> of <span id="total-questions">10</span>
+                    </p>
+                    <p>
+                        Score: <span id="score">0</span>
+                    </p>
+                </div>
+
+                <div id="answers-container" class="answer-container">
+                    <!-- Answers will be inserted here from JS code later -->
+                </div>
+                
+                <div class="progress-bar">
+                    <div id="progress" class="progess">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="screen" id="result-screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You got <span id="final-score">4</span> out of <span id="max-score">5</span>correct!</p>
+            </div>
+            <div id="result-message">
+                <h3>Keep trying, you'll do better</h3> <!-- span??? -->
+            </div>
+            <button class="restart-btn" id="restart-button">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</BODY>
+</HTml>
