@@ -55,7 +55,7 @@ header{
 .navbar ul {
         display: flex;
         list-style-type: none;
-        background-color: black;
+        background-color: #0e0d11;
         padding: 0px;
         margin: 0px;
         justify-content: center;
@@ -145,6 +145,47 @@ html, body{
     min-height: 100%;
 }
 
+.name-box{
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 7px 5px #8b3dff31;
+    border: 0.1rem solid #8b3dff86;
+    border-radius: 42px;
+    width: 25%;
+    background-color: #0e0d11;
+    padding: 25px;
+    margin-top: 20%;
+    margin-left: 10%;
+    color: #8b3dff;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+.name-custom {
+    
+}
+
+.insert-name {
+    background-color: #8b3dff;
+    color: aliceblue;
+    width: 50%;
+    height: 25%;
+    border: 0px solid #491f92;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 1rem 0.1rem rgba(186, 28, 225, 0.3);
+    transition: all 0.25s;
+}
+
+.insert-name:hover {
+    background-color: #7015f9;
+}
+
+
+.name-span {
+    color: #fdfefd;
+}
 
 /* software box */
 .software_box {
@@ -832,3 +873,54 @@ html, body{
 
 /* GAMES PAGE */
 
+.project-one-btn {
+    position: fixed;
+    bottom: 40%;
+    left: 30%;
+    z-index: 99999;
+    background-color: #111014;
+    border: 2px solid #8b3dff;
+    border-radius: 1rem;
+    width: 16%;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.project-two-btn {
+    position: fixed;
+    bottom: 40%;
+    left: 50%;
+    z-index: 99999;
+    background-color: #111014;
+    border: 2px solid #8b3dff;
+    border-radius: 1rem;
+    width: 16%;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.project-one-btn:hover,
+.project-two-btn:hover {
+    background-color: #8b3dff;
+    border: 2px solid #cfcfcf;
+}
+
+.project-one-text,
+.project-two-dice {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project-one-btn h1,
+.project-two-btn h1 {
+    margin: 0;
+    line-height: 80px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: aliceblue;
+}
