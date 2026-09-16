@@ -3,27 +3,17 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It's All Subjective</title>
-    <link rel="icon" type="image/x-icon" href="images/web-icon-pw.png">
     <link rel="stylesheet" href="homestyle.css">
+    <link rel="icon" type="image/x-icon" href="images/web-icon-pw.png">
 </head>
-<style>
-
-</style>
 <body style="background-color: black;">
-    </div>
-    <audio id="bg-music" loop>
-        <source src="audio/beeep.mp3">
-    </audio>
-    <script>
-        const audio = document.getElementById("bg-music");
-        audio.volume = 0.1; // This will now successfully lower the volume to 10%
-    </script>
     <header>
          <img class="top_banner" src="images/banner.gif" alt="IAS logo">
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">/home</a></li>
                 <li><a href="Abount.html">/about</a></li>
+                <li><a href="Projects.html">/about</a></li>
                 <li class="has-sub_projects">
                 <button type="button" class="dropdown-toggle">/projects</button>
                     <ul class="sub_projects">
@@ -32,43 +22,13 @@
                     <li><a href="Code.html">/code</a></li>
                     </ul>
                 </li>
-                <li><a href="Code.html">/contact</a></li>  
+                <li><a href="Contact.html">/contact</a></li>  
                 <li><a href="Blog.html">/blog</a></li>
             </ul>
         </nav>
     </header>
-        
-    <div class="project-container">
-        <div class="project-one-btn" id="project-one-btn">  
-            <a href="quiz.html" class="project-one-text" id="project-coding-quiz">
-                <h1>Quiz</h1>
-            </a>
-        </div>  
-        <div class="project-two-btn" id="project-two-btn">  
-            <a href="dice-game.html" class="project-two-dice" id="project-coding-dice">
-                <h1>Dice Game</h1>
-            </a>
-        </div>
-                <div class="project-three-btn" id="project-three-btn">  
-            <a href="password-gen.html" class="project-three-pass" id="project-coding-password">
-                <h1>Password Gen</h1>
-            </a>
-        </div>
-    </div>
+    
+    <h1 style="margin-top: 15%; color: aliceblue;">GAME PROJECTS:</h1>
+
 </body>
 </html>
-
-
-<!-- 
-
-PUSH TO GIT EVERY HOUR:
-1. Stage all changes
-CMD: git add .
-
-2. Save your changes locally with a descriptive note
-CMD: git commit -m "Updated the home page layout"
-
-3. Upload them to GitHub (you don't need "-u" anymore!)
-CMD: git push 
-
--->
