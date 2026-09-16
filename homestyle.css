@@ -145,6 +145,34 @@ html, body{
     min-height: 100%;
 }
 
+.loading {
+    position: relative;
+    z-index: 100000;
+}
+
+.loading_bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 1;
+}
+
+.loading_img_container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading_img {
+    opacity: 1;
+    transition: all 300ms ease-out;
+}
+
 .name-box{
     text-align: center;
     box-sizing: border-box;
