@@ -875,7 +875,7 @@ html, body{
 
 .project-one-btn {
     position: fixed;
-    bottom: 40%;
+    top: 40%;
     left: 30%;
     z-index: 99999;
     background-color: #111014;
@@ -889,7 +889,7 @@ html, body{
 
 .project-two-btn {
     position: fixed;
-    bottom: 40%;
+    top: 40%;
     left: 50%;
     z-index: 99999;
     background-color: #111014;
@@ -901,14 +901,28 @@ html, body{
     cursor: pointer;
 }
 
+.project-three-btn {
+    position: fixed;
+    top: 80%;
+    left: 30%;
+    z-index: 99999;
+    background-color: #111014;
+    border: 2px solid #8b3dff;
+    border-radius: 1rem;
+    width: 16%;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .project-one-btn:hover,
-.project-two-btn:hover {
+.project-two-btn:hover, .project-three-btn:hover {
     background-color: #8b3dff;
     border: 2px solid #cfcfcf;
 }
 
 .project-one-text,
-.project-two-dice {
+.project-two-dice, .project-three-pass {
     text-decoration: none;
     color: white;
     display: block;
@@ -917,7 +931,7 @@ html, body{
 }
 
 .project-one-btn h1,
-.project-two-btn h1 {
+.project-two-btn h1, .project-three-btn h1 {
     margin: 0;
     line-height: 80px;
     font-size: 1.8rem;

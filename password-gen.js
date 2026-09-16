@@ -21,11 +21,12 @@ function generatePassword(passLength, includeLowercase, includeUppercase, includ
     allowedChars += includeSymbols ? symbols : "";
     allowedChars += includeUppercase ? uppercaseChars : "";
 
-
-    if (allowedChars.length === 0) {
+    if(passLength <= 0) {
+        return "(Password Length Must Be Atleast 1!)";
+    }
+    if(allowedChars.length === 0) {
         return "Select at least 1 option!";
     }
-
     for(let i = 0; i < passLength; i++) {
         const randomIndex = Math.floor(Math.random() * allowedChars.length)
         password += allowedChars[randomIndex]
@@ -46,6 +47,3 @@ generateBtn.addEventListener("click", function() {
 
     resultSpan.textContent = generatedPassword;
 });
-const password = generatePassword(passwordLength.value, includeLowercase.checked, includeUppercase.checked, includeNumbers.checked, includeSymbols.checked);
-
-console.log(`Generated password: ${password}`);
