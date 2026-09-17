@@ -958,14 +958,28 @@ html, body{
     cursor: pointer;
 }
 
+.project-five-btn {
+    position: fixed;
+    top: 55%;
+    left: 10%;
+    z-index: 99999;
+    background-color: #111014;
+    border: 2px solid #8b3dff;
+    border-radius: 1rem;
+    width: 16%;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .project-one-btn:hover,
-.project-two-btn:hover, .project-three-btn:hover, .project-four-btn:hover {
+.project-two-btn:hover, .project-three-btn:hover, .project-four-btn:hover, .project-five-btn:hover {
     background-color: #8b3dff;
     border: 2px solid #cfcfcf;
 }
 
 .project-one-text,
-.project-two-dice, .project-three-pass, .project-four-watch {
+.project-two-dice, .project-three-pass, .project-four-watch,.project-five-rps {
     text-decoration: none;
     color: white;
     display: block;
@@ -974,10 +988,10 @@ html, body{
 }
 
 .project-one-btn h1,
-.project-two-btn h1, .project-three-btn h1,.project-three-btn h1 {
+.project-two-btn h1, .project-three-btn h1,.project-three-btn h1, .project-five-btn h1 {
     margin: 0;
     line-height: 80px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: aliceblue;
 }
