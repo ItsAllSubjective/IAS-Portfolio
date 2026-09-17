@@ -979,7 +979,7 @@ html, body{
 }
 
 .project-one-text,
-.project-two-dice, .project-three-pass, .project-four-watch,.project-five-rps {
+.project-two-dice, .project-three-pass, .project-four-clock,.project-five-rps {
     text-decoration: none;
     color: white;
     display: block;

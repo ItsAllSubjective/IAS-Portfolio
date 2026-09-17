@@ -68,7 +68,7 @@ body {
 }
 
 .show {
-    display: inline-block; /* Or 'block', depending on your layout style */
+    display: inline-block;
 }
 
 .score-display {

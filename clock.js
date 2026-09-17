@@ -46,3 +46,25 @@ function update() {
 
     display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 }
+
+
+// CLOCK
+
+
+function updateClock(){
+
+    const now = new Date();
+    let hours = now.getHours();
+    const meridiem = hours >= 12 ? " PM" : " AM";
+    hours = hours % 12 || 12;
+    hours = hours.toString().padStart(2, 0);
+    const minutes = now.getMinutes().toString().padStart(2, 0);
+    const seconds = now.getSeconds().toString().padStart(2, 0);
+    const ms2Digit = Math.floor(now.getMilliseconds() / 10);
+    const milliseconds = ms2Digit.toString().padStart(2, '0');    
+    const timeSpring = `${hours}:${minutes}:${seconds}:${milliseconds}${meridiem}`;
+    document.getElementById("clock").textContent = timeSpring;
+}
+
+updateClock();
+setInterval(updateClock, 1000);

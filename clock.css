@@ -7,13 +7,13 @@ body {
     border: 2px solid #3f08a0;
     border-radius: 5vh;
     box-shadow: 2px 2px 30px 2px rgba(64, 8, 160, 0.492);
-    margin-top: 25vh;
-    margin-left: 50vh;
+    margin-top: 12.5vh;
+    margin-left: 30vh;
     background-color: #111014;
     padding-top: 1rem;
     padding-bottom: 2rem;
     min-width: auto;
-    max-width: 50%;
+    max-width: 70%;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: #8b3dff;
@@ -38,7 +38,7 @@ body {
     background-color: #b282ff;
     border: 2px solid #b282ff;
     color:aliceblue;
-    font-size: 1.3rem;
+    font-size: rem;
 }
 
 .timer-count {
@@ -46,3 +46,20 @@ body {
     font-size: clamp(2.5rem, 7vw, 6rem);
     overflow: hidden;
 }
+
+.clock {
+    font-size: 6rem;
+    color: aliceblue;
+    margin-bottom: 4rem;
+}
+
+.stopwatch-header {
+    margin-bottom: 0.25rem;
+    font-size: 4rem;
+}
+
+.clock-header {
+    margin-bottom: 0.25rem;
+    font-size: 4rem;
+}
+
