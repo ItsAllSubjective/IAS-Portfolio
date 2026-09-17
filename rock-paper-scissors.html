@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's All Subjective</title>
+    <link rel="stylesheet" href="rock-paper-scissors.css">
+    <link rel="icon" type="image/x-icon" href="images/web-icon-pw.png">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <div class="rps-game-container" id="rps-game-container">
+<!-- header & instructions -->
+            <div class="header-instructions" id="header-instructions">
+                <h1>Rock - Paper - Scissors</h1>
+                <h4>Click Rock, Paper, or Scissors. The computer counters. Win 2 out of 3 rounds to win!</h4>
+            </div>
+<!-- player chice: -->
+            <div class="player-choice">
+                <h2 class="player-choice-h1">Player Plays: <span id="player-choice-text"></span></h2>
+                <button onclick="playGame('paper')" class="paper-btn" id="paper-btn">   
+                    <img src="images/paper-btn.png" nopin="nopin" alt="Paper Button">
+                </button>
+                <button onclick="playGame('rock')" class="rock-btn" id="rock-btn">   
+                    <img src="images/rock-btn.png" nopin="nopin" alt="Rock Button">
+                </button>  
+                <button onclick="playGame('scissors')" class="scissor-btn" id="scissor-btn"> 
+                    <img src="images/scissor-btn.png" nopin="nopin" alt="Scissor Button">
+                </button>  
+            </div>
+<!-- computer choice -->
+            <!-- FIX: Removed id="computer-result" from this div -->
+            <div class="computer-result">
+                <!-- FIX: Added span tag with the ID here so only this text updates -->
+                <h2 class="computer-choice-h1">Computer Plays: <span id="computer-result-text"></span></h2>
+                <img src="images/paper.png" nopin="nopin" alt="Paper Result" class="paper-result" id="paper-result">
+                <img src="images/rock.png" nopin="nopin" alt="Rock Result" class="rock-result" id="rock-result">
+                <img src="images/scissor.png" nopin="nopin" alt="Scissor Result" class="scissor-result" id="scissor-result">
+            </div>
+            <div class="display" id="result-display"></div>
+            <div class="score-display">PLAYER SCORE: <span id="player-score-display">0</span></div>
+            <div class="score-display">COMPUTER SCORE: <span id="computer-score-display">0</span></div>
+        </div>
+        <script src="rock-paper-scissors.js"></script>
+    </body>
+</html>
